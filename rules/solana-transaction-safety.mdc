@@ -1,0 +1,30 @@
+---
+description: Safety rules for Solana transaction handling with Phantom
+globs: **/*.{ts,tsx,js,jsx}
+alwaysApply: true
+---
+
+# Solana Transaction Safety
+
+## Amount Conversion
+
+- Always use `LAMPORTS_PER_SOL` from `@solana/web3.js` for SOL-to-lamport conversion. Never hardcode `1000000000` or any other magic number.
+
+## Priority Fees
+
+- For time-sensitive transactions, add priority fees using `ComputeBudgetProgram.setComputeUnitPrice()` from `@solana/web3.js`. This helps ensure transactions are processed quickly during network congestion.
+
+## Transaction Verification
+
+- Always verify transaction status after sending by checking the signature with `connection.getSignatureStatus()` or `connection.confirmTransaction()`. Do not assume a returned signature means the transaction succeeded.
+
+## Network Selection
+
+- Use `https://api.devnet.solana.com` (devnet) for testing and development.
+- Use `https://api.mainnet-beta.solana.com` (mainnet-beta) for production.
+- Never test against mainnet with real funds during development.
+
+## Key Security
+
+- Never expose private keys in code. Phantom handles all signing internally through its SDK. There is no need to access or manage private keys directly.
+- Never ask users to input their seed phrase or private key.

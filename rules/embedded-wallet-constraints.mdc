@@ -1,0 +1,27 @@
+---
+description: Constraints and limitations for Phantom embedded wallets
+globs: **/*.{ts,tsx,js,jsx}
+alwaysApply: true
+---
+
+# Embedded Wallet Constraints
+
+## Unsupported Methods
+
+- `signTransaction` and `signAllTransactions` are NOT supported for embedded wallets. Always use `signAndSendTransaction` instead. Calling unsupported methods will throw a runtime error.
+
+## Spending Limits
+
+- Default spending limit for embedded wallets is **$1,000 USD per day per app per user**. Design your UX to account for this limit and provide clear error messages if a transaction exceeds it.
+
+## Session Duration
+
+- Social login sessions persist for **7 days** from the last authentication event. After expiry, users must re-authenticate. Handle session expiration gracefully in your UI — check `isConnected` before operations and prompt re-login when needed.
+
+## Social Login Requirements
+
+- Social login (Google, Apple) requires a valid `appId` from [Phantom Portal](https://portal.phantom.com). Without an `appId`, social login options will not appear.
+
+## React Native Polyfill
+
+- React Native apps **MUST** import `react-native-get-random-values` as the very first import in the entry file, before any other imports including the Phantom SDK. Failing to do this will cause crypto-related runtime errors.

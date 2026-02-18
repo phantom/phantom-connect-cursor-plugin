@@ -1,0 +1,33 @@
+---
+description: General best practices for using Phantom Connect SDKs
+globs: **/*.{ts,tsx,js,jsx}
+alwaysApply: true
+---
+
+# Phantom SDK Best Practices
+
+## Transaction Signing
+
+- Always use `signAndSendTransaction` for sending transactions. NEVER use `signTransaction` — it is NOT supported for embedded wallets and will throw an error.
+
+## Provider Setup
+
+- In React apps, always wrap the application root in `PhantomProvider` with a valid config object containing `appId`, `providers`, and `addressTypes`.
+- In vanilla JS/TS apps, initialize a single `BrowserSDK` instance and reuse it as a singleton throughout the application. Never create multiple instances.
+
+## Error Handling
+
+- Always wrap `connect()`, `signAndSendTransaction()`, `signMessage()`, and other async SDK calls in try-catch blocks. Users can reject prompts at any time.
+
+## Connection State
+
+- Always check `isConnected` or verify account availability before attempting signing or transaction operations.
+- Access accounts via `useAccounts()` hook (React) or `sdk.accounts` (Browser SDK) and filter by `chain` property.
+
+## Imports
+
+- Import `AddressType` from `@phantom/browser-sdk` when using the Browser SDK. Do not import it from other packages.
+
+## App Registration
+
+- Always register your app in [Phantom Portal](https://portal.phantom.com) and use a real `appId`. Social login and embedded wallet features require a valid `appId`.
