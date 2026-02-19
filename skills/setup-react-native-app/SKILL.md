@@ -1,12 +1,14 @@
+---
+name: setup-react-native-app
+description: Scaffold a React Native (Expo) app with Phantom React Native SDK for mobile wallet integration, including polyfills and deep linking
+---
+
 # Scaffold React Native App with Phantom Connect
 
-## Description
-
-Set up a React Native (Expo) application with the Phantom React Native SDK for mobile wallet integration, including required polyfills and deep linking configuration.
-
-## Trigger
-
-User asks to set up a React Native app with Phantom Connect, create a mobile wallet integration, or scaffold a Phantom integration for iOS/Android.
+## When to use
+- User asks to set up a React Native app with Phantom Connect
+- User wants to create a mobile wallet integration
+- User wants to scaffold a Phantom integration for iOS/Android
 
 ## Workflow
 

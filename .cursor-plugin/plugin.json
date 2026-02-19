@@ -3,8 +3,14 @@
   "displayName": "Phantom Connect SDK",
   "version": "1.0.0",
   "description": "AI-powered assistance for integrating the Phantom Connect SDK — scaffold projects, write correct wallet integration code, and search Phantom docs in real-time.",
-  "author": "Phantom",
+  "author": {
+    "name": "Phantom",
+    "email": "developers@phantom.com"
+  },
+  "homepage": "https://github.com/phantom/phantom-connect-cursor-plugin",
+  "repository": "https://github.com/phantom/phantom-connect-cursor-plugin",
   "license": "MIT",
+  "logo": "assets/avatar.png",
   "keywords": [
     "phantom",
     "solana",
@@ -12,25 +18,14 @@
     "web3",
     "connect"
   ],
-  "category": "developer-tools",
-  "skills": [
-    "skills/setup-react-app/SKILL.md",
-    "skills/setup-browser-app/SKILL.md",
-    "skills/setup-react-native-app/SKILL.md",
-    "skills/send-sol-transaction/SKILL.md",
-    "skills/sign-message/SKILL.md",
-    "skills/add-social-login/SKILL.md"
+  "tags": [
+    "developer-tools",
+    "web3",
+    "solana",
+    "wallet"
   ],
-  "rules": [
-    "rules/phantom-sdk-best-practices.mdc",
-    "rules/solana-transaction-safety.mdc",
-    "rules/embedded-wallet-constraints.mdc"
-  ],
-  "agents": [
-    "agents/phantom-integration-specialist.md"
-  ],
-  "mcp": "mcp.json",
-  "assets": {
-    "avatar": "assets/avatar.png"
-  }
+  "skills": "./skills/",
+  "rules": "./rules/",
+  "agents": "./agents/",
+  "mcpServers": ".mcp.json"
 }

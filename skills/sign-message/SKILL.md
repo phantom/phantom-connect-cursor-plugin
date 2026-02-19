@@ -1,12 +1,14 @@
+---
+name: sign-message
+description: Implement message signing with Phantom Connect SDK for Solana and EVM, including Sign-in with Solana (SIWS) authentication
+---
+
 # Sign Message
 
-## Description
-
-Implement message signing with Phantom Connect SDK for both Solana and EVM chains, including Sign-in with Solana (SIWS) for authentication flows.
-
-## Trigger
-
-User asks to sign a message, implement SIWS, verify wallet ownership, or add wallet-based authentication.
+## When to use
+- User asks to sign a message
+- User wants to implement SIWS (Sign-in with Solana)
+- User wants to verify wallet ownership or add wallet-based authentication
 
 ## Workflow
 

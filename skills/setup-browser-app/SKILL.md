@@ -1,12 +1,14 @@
+---
+name: setup-browser-app
+description: Scaffold a vanilla JS/TS app with Phantom Browser SDK for wallet integration, without any framework dependency
+---
+
 # Scaffold Browser App with Phantom Connect
 
-## Description
-
-Set up a vanilla JavaScript/TypeScript application with the Phantom Browser SDK for wallet integration, without any framework dependency.
-
-## Trigger
-
-User asks to set up a vanilla JS app with Phantom Connect, create a framework-agnostic wallet integration, or use the Browser SDK directly.
+## When to use
+- User asks to set up a vanilla JS app with Phantom Connect
+- User wants to create a framework-agnostic wallet integration
+- User wants to use the Browser SDK directly
 
 ## Workflow
 

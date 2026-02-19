@@ -1,12 +1,14 @@
+---
+name: send-sol-transaction
+description: Build and send SOL transfers with Phantom Connect SDK, including transaction construction, signing, and verification
+---
+
 # Send SOL Transaction
 
-## Description
-
-Build a SOL transfer flow using Phantom Connect SDK, including transaction construction, signing, sending, and verification.
-
-## Trigger
-
-User asks to send SOL, transfer tokens, build a Solana transaction, or implement a payment flow with Phantom.
+## When to use
+- User asks to send SOL or transfer tokens
+- User wants to build a Solana transaction
+- User wants to implement a payment flow with Phantom
 
 ## Workflow
 

@@ -1,12 +1,14 @@
+---
+name: add-social-login
+description: Configure Google and Apple social login with Phantom Connect SDK to enable embedded wallet creation
+---
+
 # Add Social Login Authentication
 
-## Description
-
-Configure Google and Apple social login with Phantom Connect SDK to enable embedded wallet creation without requiring users to have a pre-existing wallet.
-
-## Trigger
-
-User asks to add social login, enable Google/Apple sign-in, set up embedded wallets, or add passwordless authentication with Phantom.
+## When to use
+- User asks to add social login or enable Google/Apple sign-in
+- User wants to set up embedded wallets
+- User wants to add passwordless authentication with Phantom
 
 ## Workflow
 

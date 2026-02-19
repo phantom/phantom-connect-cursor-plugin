@@ -1,12 +1,14 @@
+---
+name: setup-react-app
+description: Scaffold a React app with Phantom Connect SDK for wallet integration, including social login and Solana support
+---
+
 # Scaffold React App with Phantom Connect
 
-## Description
-
-Set up a React application with Phantom Connect SDK for wallet integration, including social login and Solana support.
-
-## Trigger
-
-User asks to set up a React app with Phantom Connect, create a wallet-connected React project, or scaffold a Phantom integration in React.
+## When to use
+- User asks to set up a React app with Phantom Connect
+- User wants to create a wallet-connected React project
+- User wants to scaffold a Phantom integration in React
 
 ## Workflow
 
